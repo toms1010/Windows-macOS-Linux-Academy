@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+
+# Local environment / secrets (never commit)
+.env
+.env.local
+.env.*.local
+.env.production
+
+# Local SQLite data (may contain user feedback)
+data/
+
+# Logs / OS noise
+*.log
+.DS_Store

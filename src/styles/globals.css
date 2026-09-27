@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#f6f9fc] dark:bg-[#0a121f] text-[#0b1a2f] dark:text-[#e8edf5] transition-colors duration-300;
+    font-family: 'Inter', sans-serif;
+  }
+  ::selection { @apply bg-primary/30; }
+  /* Muted foreground needs a lighter value on dark backgrounds for contrast */
+  .dark .text-muted-foreground { color: #94a3b8; }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/70 dark:bg-[#111c2e]/70 backdrop-blur-glass border border-white/20 dark:border-white/10 shadow-glass;
+  }
+  .glass-hover {
+    @apply hover:shadow-glass-hover hover:bg-white/80 dark:hover:bg-[#111c2e]/80 transition-all duration-300;
+  }
+}
+
+/* Custom scrollbar for sidebar */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(37, 99, 235, 0.3);
+  border-radius: 10px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: rgba(37, 99, 235, 0.5);
+}
+
+/* Respect users who prefer reduced motion: collapse decorative
+   transitions/animations (simulator state itself still updates). */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
