@@ -18,7 +18,7 @@ test → update affected docs → update debt status → changelog → verify no
 - **Resolution:** `npx supabase gen types typescript --project-id <PROJECT_ID> > src/types/database.types.ts`,
   then `npx tsc --noEmit` + check `src/features/` consumers.
 - **Docs on close:** `docs/backend/supabase.md`, `docs/backend/database.md`,
-  `docs/database/schema.md`, `docs/changelog.md`.
+  `docs/database/schema.md`, `CHANGELOG.md`.
 
 ## TD-2 — Static quiz data outside `features/` (OPEN, accepted)
 - **File:** `src/data/quizBank.ts` (note: briefs sometimes write
@@ -30,7 +30,7 @@ test → update affected docs → update debt status → changelog → verify no
   into Supabase (`quiz_questions`) — then update the question service,
   delete this file only with zero dependents, never two sources of truth.
 - **Docs on close:** `docs/architecture/folder-structure.md`,
-  `docs/backend/services.md`, `docs/database/tables.md`, `docs/changelog.md`.
+  `docs/backend/services.md`, `docs/database/tables.md`, `CHANGELOG.md`.
 
 ## TD-3 — Temporary SQLite database (OPEN)
 - **File:** `src/lib/db.ts` (`node:sqlite`, zero new deps). Consumers:
@@ -41,7 +41,7 @@ test → update affected docs → update debt status → changelog → verify no
   `lib/db.ts` + config → typecheck/lint/build → verify flows manually.
 - **Docs on close:** `docs/architecture/overview.md`, `data-flow.md`,
   `folder-structure.md`, `docs/backend/supabase.md`, `services.md`,
-  `security.md`, `docs/database/schema.md`, `docs/changelog.md`.
+  `security.md`, `docs/database/schema.md`, `CHANGELOG.md`.
 
 ## Rules for future changes
 1. Temporary stays must be documented (code header + here).

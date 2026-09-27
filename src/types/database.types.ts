@@ -14,7 +14,7 @@
  *   types must model UI/domain concepts, not re-declare the schema).
  * - After regeneration, verify `npx tsc --noEmit` and the services in
  *   src/features/ that consume these types, then update docs/backend/supabase.md,
- *   docs/backend/database.md, docs/database/schema.md, docs/changelog.md.
+ *   docs/backend/database.md, docs/database/schema.md, CHANGELOG.md.
  */
 
 export type Json = string | number | boolean | null | { [key: string]: Json | undefined } | Json[];

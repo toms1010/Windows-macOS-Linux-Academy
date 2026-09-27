@@ -16,7 +16,7 @@ import type { ContactMessage } from '@/types/contact';
  * and related config → typecheck/lint/build → verify flows manually →
  * update docs/architecture/overview.md, data-flow.md, folder-structure.md,
  * docs/backend/supabase.md, services.md, security.md, docs/database/schema.md,
- * docs/changelog.md.
+ * CHANGELOG.md.
  *
  * - Single shared connection, cached on globalThis so dev hot-reloads
  *   don't open a new database per request.
