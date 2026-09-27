@@ -128,3 +128,4 @@ The three standalone HTML prototypes these labs were converted from are
 archived under `docs/originals/` (`cpu-scheduling-`, `virtual-memory-`,
 `filesystem-original.html`). They are reference only — the React labs above
 are the maintained implementations.
+# Windows-macOS-Linux-Academy
